@@ -374,7 +374,7 @@ namespace InformedProteomics.FeatureFinding
                                         feature.RepresentativeMz,
                                         feature.Abundance));
 
-            sb.AppendFormat("\t{0:0}", feature.ApexScanNum);
+            sb.AppendFormat("\t{0:0.000}", feature.ApexElutionTime);
             sb.AppendFormat("\t{0:0.00}", feature.ApexIntensity);
 
             sb.AppendFormat("\t{0:0.000}", feature.MinElutionTime);
@@ -428,7 +428,7 @@ namespace InformedProteomics.FeatureFinding
         public static readonly string[] TsvHeader = {
             "FeatureID", "MinScan", "MaxScan", "MinCharge", "MaxCharge",
             "MonoMass", "RepScan", "RepCharge", "RepMz", "Abundance",
-            "ApexScanNum", "ApexIntensity",
+            "ApexRetentionTime", "ApexIntensity",
             "MinElutionTime", "MaxElutionTime", "ElutionLength", "Envelope", "LikelihoodRatio"
         };
 
